@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Professional CV for Your Name.">
+	<title>Your Name | CV</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		:root { --ink: #203044; --muted: #68788a; --accent: #147d80; --paper: #fff; }
+		* { box-sizing: border-box; }
+		body { margin: 0; padding: 3rem 1rem; background: #edf2f4; color: var(--ink); font: 16px/1.65 "Segoe UI", Arial, sans-serif; }
+		.cv { max-width: 900px; margin: auto; overflow: hidden; background: var(--paper); border-radius: 18px; box-shadow: 0 18px 50px #2030441a; }
+		header { padding: 3.5rem 4rem; color: #fff; background: linear-gradient(125deg, #173b50, #147d80); }
+		.kicker { margin: 0 0 .5rem; color: #c2e6e4; font-size: .8rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+		h1 { margin: 0; font-size: clamp(2.6rem, 7vw, 4rem); line-height: 1.1; }
+		.tagline { margin: .75rem 0 1.4rem; color: #e3f2f1; font-size: 1.15rem; }
+		.contact { display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; margin: 0; font-size: .95rem; }
+		.contact a { color: white; text-underline-offset: 3px; }
+		main { padding: .5rem 4rem 3rem; }
+		section { padding: 1.6rem 0; border-bottom: 1px solid #e4eaed; }
+		section:last-child { border-bottom: 0; }
+		h2 { display: flex; align-items: center; gap: .8rem; margin: 0 0 1rem; color: var(--accent); font-size: 1rem; letter-spacing: .12em; text-transform: uppercase; }
+		h2::after { height: 1px; flex: 1; background: #dce7e8; content: ""; }
+		h3 { margin: 0; font-size: 1.12rem; }
+		p { margin: .4rem 0; }
+		.profile { max-width: 70ch; color: #405366; font-size: 1.05rem; }
+		.entry { margin: 1.2rem 0 1.5rem; }
+		.entry:last-child { margin-bottom: 0; }
+		.entry-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .2rem 1rem; }
+		.meta { color: var(--muted); font-size: .94rem; }
+		ul { margin: .6rem 0 0; padding-left: 1.2rem; color: #405366; }
+		li { padding: .15rem 0; }
+		.skills { display: flex; flex-wrap: wrap; gap: .6rem; margin: 0; padding: 0; list-style: none; }
+		.skills li { padding: .35rem .8rem; border: 1px solid #cce3e2; border-radius: 999px; background: #f1f8f7; color: #24595c; }
+		@media (max-width: 600px) { body { padding: 1rem .5rem; } header { padding: 2.5rem 1.5rem; } main { padding: .5rem 1.5rem 2rem; } .cv { border-radius: 12px; } }
+		@media print { body { padding: 0; background: #fff; } .cv { max-width: none; box-shadow: none; } header { print-color-adjust: exact; -webkit-print-color-adjust: exact; } }
+	</style>
+</head>
+<body>
+	<div class="cv">
+		<header>
+			<p class="kicker">Curriculum vitae</p>
+			<h1>Daniel</h1>
+			<p class="tagline">Physicist</p>
+			<p class="contact">
+				<a href="mailto:you@example.com">danielduncanson@icloud.com</a>
+				<span>Your City, Country</span>
+				<a href="https://www.linkedin.com/in/daniel-duncanson">LinkedIn profile</a>
+			</p>
+		</header>
+		<main>
+			<section aria-labelledby="profile-title">
+				<h2 id="profile-title">Profile</h2>
+				<p class="profile">Introduce yourself in a few thoughtful sentences. Highlight your experience, strongest qualities, and the kind of contribution you hope to make in your next role.</p>
+			</section>
+			<section aria-labelledby="experience-title">
+				<h2 id="experience-title">Work experience</h2>
+				<article class="entry">
+					<div class="entry-top"><h3>Job Title <span class="meta">· Company Name</span></h3><p class="meta">Month Year – Present</p></div>
+					<p class="meta">City, Country (or Remote)</p>
+					<ul>
+						<li>Describe a contribution you made and the positive result it created.</li>
+						<li>Highlight a project, responsibility, or collaboration that demonstrates your strengths.</li>
+						<li>Include a measurable achievement where possible, such as time saved or people supported.</li>
+					</ul>
+				</article>
+				<article class="entry">
+					<div class="entry-top"><h3>Previous Job Title <span class="meta">· Previous Company</span></h3><p class="meta">Month Year – Month Year</p></div>
+					<p class="meta">City, Country</p>
+					<p>Summarize your responsibilities and a key accomplishment in one or two concise sentences.</p>
+				</article>
+			</section>
+			<section aria-labelledby="education-title">
+				<h2 id="education-title">Education</h2>
+				<article class="entry">
+					<div class="entry-top"><h3>Qualification or Degree</h3><p class="meta">Year – Year</p></div>
+					<p class="meta">School or University · City, Country</p>
+					<p>Add a relevant subject, distinction, or academic accomplishment.</p>
+				</article>
+			</section>
+			<section aria-labelledby="skills-title">
+				<h2 id="skills-title">Skills</h2>
+				<ul class="skills">
+					<li>Skill or tool</li><li>Communication</li><li>Project planning</li><li>Problem solving</li><li>Another relevant skill</li>
+				</ul>
+			</section>
+			<section aria-labelledby="more-title">
+				<h2 id="more-title">Beyond the role</h2>
+				<p>Optionally share languages, certifications, volunteer work, or interests that add a personal dimension to your application.</p>
+			</section>
+		</main>
+	</div>
+</body>
+</html>

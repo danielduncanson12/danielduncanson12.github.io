@@ -12,3 +12,33 @@ ul {
 li {
   margin-left: 20px;
 }
+
+h2 {
+  color:blue;
+  font-family: fantasy;
+}
+
+.note {
+  color:darkmagenta;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 800;
+}
+
+a {
+    font-weight: 200;
+    font-family: Helvetica;
+    text-decoration: none;
+    text-transform: lowercase;
+    color: #151814;
+}
+
+a:hover {
+    color: #151814;
+    background-color: #DFFFD6;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+a:active {
+    background-color: #F3FFE1;
+}
