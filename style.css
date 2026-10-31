@@ -1,12 +1,21 @@
 html {
   background-color:midnightblue;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.page-container {
+    max-width: 750px;   /* Controls the maximum width (roughly the middle half on desktop) */
+    width: 90%;         /* Ensures it shrinks gracefully on smaller mobile screens */
+    margin: 0 auto;     /* Automatically splits the remaining space equally on the left and right */
 }
 
 p { 
   color:azure;
   font-size: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin: 25px 50px 50px
+  margin: 25px 50px 50px;
+  line-height: 1.5;
 }
 
 ul {
@@ -34,7 +43,8 @@ a {
     text-decoration: none;
     text-transform: lowercase;
     color: azure;
-    margin: 20px 20px 20px
+    margin: 50px 50px 50px;
+    font-size: large;
 }
 
 a:hover {
