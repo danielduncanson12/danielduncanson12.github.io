@@ -1,6 +1,12 @@
 html {
-  background-color: green;
+  background-color:midnightblue;
+}
+
+p { 
+  color:azure;
   font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 25px 50px 50px
 }
 
 ul {
@@ -14,8 +20,8 @@ li {
 }
 
 h2 {
-  color:blue;
-  font-family: fantasy;
+  color: azure;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .note {
@@ -25,18 +31,16 @@ h2 {
 }
 
 a {
-    font-weight: 200;
-    font-family: Helvetica;
     text-decoration: none;
     text-transform: lowercase;
-    color: #151814;
+    color: azure;
+    margin: 20px 20px 20px
 }
 
 a:hover {
-    color: #151814;
-    background-color: #DFFFD6;
-    text-transform: uppercase;
-    font-weight: normal;
+    color: midnightblue;
+    background-color: azure;
+    text-transform: lowercase;
 }
 
 a:active {
