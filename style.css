@@ -1,18 +1,16 @@
-html {
+html, body {
   background-color:midnightblue;
-  max-width: 1000px;
-  margin: 0 auto;
+  font-size: 20px;
 }
 
-.page-container {
-    max-width: 750px;   /* Controls the maximum width (roughly the middle half on desktop) */
-    width: 90%;         /* Ensures it shrinks gracefully on smaller mobile screens */
-    margin: 0 auto;     /* Automatically splits the remaining space equally on the left and right */
+.page_style {
+  max-width: 700px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 p { 
   color:azure;
-  font-size: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 25px 50px 50px;
   line-height: 1.5;
@@ -39,20 +37,41 @@ h2 {
   font-weight: 800;
 }
 
-a {
+.nav_style {
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.nav_style a{
     text-decoration: none;
     text-transform: lowercase;
     color: azure;
-    margin: 50px 50px 50px;
-    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:bold;
+    font-size: 1.2rem;
+    transition: color 0.2s ease;
+    padding: 0.2rem
 }
 
-a:hover {
+
+.nav_style a:hover {
     color: midnightblue;
     background-color: azure;
     text-transform: lowercase;
+    border-radius: 10px 10px;
 }
 
-a:active {
-    background-color: #F3FFE1;
+a {
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.1s ease;
+  color: azure;
+}
+a:hover { 
+  color:midnightblue;
+  background-color: azure;
+  border-radius: 5px;
+
 }
