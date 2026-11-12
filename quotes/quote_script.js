@@ -1,12 +1,13 @@
+const yesterdayButton = document.getElementById("yesterday");
+const tomorrowButton = document.getElementById("tomorrow");
 
 async function getQuote(requestedDay){
-    const response = await fetch('quotes.json');
+    const response = await fetch('quotes/quotes.json');
     const jsonQuotes = await response.json();
     const QuoteObj = jsonQuotes[requestedDay % jsonQuotes.length]
 
     return QuoteObj;
 }
-
 
 async function displayQuote(dayIndex){
     const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -14,7 +15,7 @@ async function displayQuote(dayIndex){
     let month = months[d.getMonth()];
     const todaysQuote = await getQuote(d.getDate() + dayIndex);
 
-    document.getElementById("quoteheader").textContent = `${dayLabels.at(dayIndex)}'s ${todaysQuote.type}`;
+    document.getElementById("quoteheader").textContent = `A ${todaysQuote.type} for ${dayLabels.at(dayIndex)}`;
     document.getElementById("quotetext").textContent = `"${todaysQuote.quote}"`;
     document.getElementById("quoteauthor").textContent = ` - ${todaysQuote.author}`
     yesterdayButton.style.display = "";
@@ -31,7 +32,7 @@ async function displayQuote(dayIndex){
     }
     if (dayIndex >2){
         document.getElementById("quoteheader").textContent=""
-        document.getElementById("quotetext").textContent = '"No spoilers!"';
+        document.getElementById("quotetext").textContent = '"No spoilies!"';
         document.getElementById("quoteauthor").textContent = "- Matilde"
         tomorrowButton.style.display = "none";
     }
@@ -41,10 +42,8 @@ const dayLabels = ["today", "tomorrow", "overmorrow", "ereyesterday", "yesterday
 let dayIndex = 0;
 // -3: error, -2: ereyesterday, -1: yesterday, 0:today, 1:tmrw, 2:overmorrow, 3:error
 
-displayQuote(dayIndex);
 
-const yesterdayButton = document.getElementById("yesterday");
-const tomorrowButton = document.getElementById("tomorrow");
+displayQuote(dayIndex);
 
 
 document.getElementById("yesterday").addEventListener("click", () => {
