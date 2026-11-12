@@ -1,0 +1,18 @@
+from deep_translator import GoogleTranslator
+import time
+
+sentences = [
+    "Onde fica a estação de trem?",
+    "Quanto custa este bilhete?",
+    "Muito obrigado pela ajuda."
+]
+
+
+# Initialize ONCE outside the loop
+translator = GoogleTranslator(source='pt', target='en')
+
+# Translate all sentences in a single request
+translated_sentences = translator.translate_batch(sentences)
+
+for original, translated in zip(sentences, translated_sentences):
+    print(f"Original: {original} --> Translated: {translated}")

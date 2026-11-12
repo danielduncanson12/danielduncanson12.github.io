@@ -21,17 +21,17 @@ async function displayQuote(dayIndex){
     tomorrowButton.style.display = "";
 
     if (dayIndex === 0){ 
-        document.getElementById("quoteheader").textContent = `${todaysQuote.type} for ${month} ${d.getDate()}`;
+        document.getElementById("quoteheader").textContent = `A ${todaysQuote.type} for ${month} ${d.getDate()}`;
     }
     if (dayIndex < -2){
         document.getElementById("quoteheader").textContent=""
-        document.getElementById("quotetext").textContent = "One can only exist in this present moment.\nStop looking at quotes from the past.";
+        document.getElementById("quotetext").textContent = '"One can only exist in this present moment.\nStop looking at quotes from the past."';
         document.getElementById("quoteauthor").textContent = "- Me."
         yesterdayButton.style.display = "none";
     }
     if (dayIndex >2){
         document.getElementById("quoteheader").textContent=""
-        document.getElementById("quotetext").textContent = "No spoilers!";
+        document.getElementById("quotetext").textContent = '"No spoilers!"';
         document.getElementById("quoteauthor").textContent = "- Matilde"
         tomorrowButton.style.display = "none";
     }
@@ -43,8 +43,8 @@ let dayIndex = 0;
 
 displayQuote(dayIndex);
 
-// const yesterdayButton = document.getElementById("yesterday");
-// const tomorrowButton = document.getElementById("tomorrow");
+const yesterdayButton = document.getElementById("yesterday");
+const tomorrowButton = document.getElementById("tomorrow");
 
 
 document.getElementById("yesterday").addEventListener("click", () => {

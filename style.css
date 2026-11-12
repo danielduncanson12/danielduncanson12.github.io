@@ -53,6 +53,7 @@ a:hover {
 
 .quotenav{
   margin-top: 5rem;
+  margin-bottom: 2rem;
   text-align: center;
   display: flex;
   list-style: none;
@@ -86,4 +87,13 @@ a:hover {
   color:darkmagenta;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 800;
+}
+
+footer ul{
+  margin-top: 10rem;
+  text-align: center;
+  display: flex;
+  list-style: none;
+  justify-content:space-evenly;
+  padding: 0.5rem;
 }
