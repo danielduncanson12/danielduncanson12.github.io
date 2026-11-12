@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width">
-
     <meta name="author" content="Daniel" />
-    <meta name="description" content="Example description of my webpage. shows up in google description." />
+    <meta name="description" content="This is my website." />
     
     <link rel="icon" href="https://danielduncanson12.github.io/test_logo.png" />
     <link rel="apple-touch-icon" href="https://danielduncanson12.github.io/test_logo.png" />
@@ -14,6 +13,7 @@
     <meta property="og:description" content="This is an example page to demonstrate usage of metadata on web pages.">
     <meta property="og:title" content="Metadata; The HTML &lt;head&gt;, on MDN">
 
+    <script defer src="quote_script.js"></script>
 
     <link href="style.css" rel="stylesheet" />
 
@@ -39,9 +39,7 @@
   <!-- <h2> <strong> Me in 10 seconds. </strong></h2>   -->
 
   <p> 
-    STEM generalist <br>
-    Lifelong learner <br>
-    Amateur liver
+    Welcome to my website.
   </p>
 
   <p> 
@@ -51,14 +49,15 @@
 
   <!-- Quote of the day? -->
 
-  <p> <em> 
-    The clouds above us join and separate, <br>
-    The breeze in the courtyard leaves and returns. <br>
-    Life is like that, so why not relax? <br>
-    Who can stop us from celebrating? <br>
-    <br>
-                                        - Lu Yu
-  </em></p>
+
+  <ul class="quotenav"> 
+    <li id="yesterday"> <a> <- ystdy </a> </li>
+    <li id="quoteheader"> </li>
+    <li id="tomorrow"> <a> tmrw -> </a> </li> 
+  </ul>
+  <blockquote id="quotetext"> Quote incoming! </blockquote>
+  <p id="quoteauthor"> Author </p>
+
 
 
     <footer> 
@@ -69,7 +68,5 @@
       </p>
     </footer>
 
-
   </body>
-
 </html>

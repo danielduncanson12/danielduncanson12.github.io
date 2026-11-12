@@ -1,65 +1,40 @@
 html, body {
   background-color:midnightblue;
   font-size: 20px;
+  color: azure;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 
 .page_style {
-  max-width: 700px;
+  max-width: 600px;
   width: 90%;
   margin: 0 auto;
 }
 
-p { 
-  color:azure;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin: 25px 50px 50px;
-  line-height: 1.5;
-}
 
-ul {
-  background: red;
-  padding: 10px;
-  border: 1px solid black;
-}
-
-li {
-  margin-left: 20px;
-}
-
-h2 {
-  color: azure;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.note {
-  color:darkmagenta;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-weight: 800;
-}
 
 .nav_style {
     display: flex;
-    justify-content: space-evenly; 
+    justify-content: space-between; 
     align-items: center;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
 }
 
 .nav_style a{
     text-decoration: none;
     text-transform: lowercase;
-    color: azure;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight:bold;
     font-size: 1.2rem;
-    transition: color 0.2s ease;
-    padding: 0.2rem
+    transition: color 1s ease;
+    padding: 0.2rem;
 }
-
 
 .nav_style a:hover {
     color: midnightblue;
     background-color: azure;
-    text-transform: lowercase;
     border-radius: 10px 10px;
 }
 
@@ -69,9 +44,46 @@ a {
   transition: color 0.1s ease;
   color: azure;
 }
+
 a:hover { 
   color:midnightblue;
   background-color: azure;
   border-radius: 5px;
+}
 
+.quotenav{
+  margin-top: 5rem;
+  text-align: center;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  padding: 0;
+}
+
+#quoteheader{
+  font-weight: bold;
+
+}
+
+.quotenav a{
+  cursor: pointer;
+  font-weight: normal;
+}
+
+#quotetext{
+  font-style: italic;
+  text-align: center;
+  white-space: pre-line;
+}
+
+#quoteauthor{
+  text-align: right;
+  margin-bottom: 5rem;
+}
+
+
+.note {
+  color:darkmagenta;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 800;
 }
