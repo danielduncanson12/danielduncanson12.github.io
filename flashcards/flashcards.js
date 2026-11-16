@@ -5,16 +5,12 @@ async function translator(event) {
 
     const pgnrReq = document.getElementById("pgnr");
     const pgnr = parseInt(pgnrReq.value);
-    const worker = "https://translator-proxy.danielduncanson12.workers.dev/";
+    const worker = `https://translator-proxy.danielduncanson12.workers.dev/?pgnr=${pgnr}`;
     const output = document.getElementById("translator-prototype");
     output.textContent = "Vocabulary extraction initiated...";
 
     try {
-        const response = await fetch(worker, {
-            method: "POST",
-            headers: { "Content-type": "application/json" },
-            body: JSON.stringify({ pgnr: pgnr })
-        });
+        const response = await fetch(worker)
         const data = await response.json();
         output.textContent = JSON.stringify(data, null, 2);
     } 
