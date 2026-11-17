@@ -15,16 +15,18 @@ async function translator(event) {
         output.textContent = ""
         data.vocabulary_list.forEach(element => {
             const card = document.createElement("div");
+            card.className = "card-class";
+            card.data = element;
+            card.isOpen = false;
             card.innerHTML = `
             <a id="${element.word_in_text}" translation="${element.english_translation}"> ${element.word_in_text} </a>
             `;
 
             output.appendChild(card);
-            let isOpen = false;
 
             card.addEventListener("click", () =>{
-                isOpen = !isOpen;
-                if (isOpen) {
+                card.isOpen = !card.isOpen;
+                if (card.isOpen) {
                     card.innerHTML = `
                     <a id="${element.word_in_text}"> ${element.word_in_text} </a>
                     <p> English: ${element.english_translation} <br>
@@ -48,9 +50,39 @@ async function translator(event) {
     const allPages = await jsonRes.json();
     const text = allPages[pgnr] || "Page not found.";
     document.getElementById("vocab-title").textContent = `Tricky vocabulary for page ${pgnr}`
-
     document.getElementById("page-text").textContent = text;
-}
+    document.getElementById("button-container").innerHTML = `<button id="open-all-button" type="button"> Open all </button>`
+
+    const openButton = document.getElementById("open-all-button");
+    let allOpen = false;
+
+
+    openButton.addEventListener("click", () => {
+        const allCards = document.querySelectorAll(".card-class");
+        allCards.forEach(card => {
+            const element = card.data;
+            if (allOpen){
+                card.isOpen = false;
+                card.innerHTML =
+                    `<a id=${element.word_in_text} translation="${element.english_translation}"> ${element.word_in_text} </a>`
+                openButton.textContent = "Open all"
+            } else{
+                card.isOpen = true;
+                card.innerHTML = `
+                    <a id="${element.word_in_text}"> ${element.word_in_text} </a>
+                    <p> English: ${element.english_translation} <br>
+                    Base: ${element.base_form} <br>
+                    Type: ${element.part_of_speech} <br>
+                    Notes: ${element.notes} </p>`   
+                
+                openButton.textContent = "Close all"  
+            }
+        })
+        allOpen = !allOpen;
+
+    })
+};
 
 form.addEventListener("submit", translator);
+
 

@@ -31,15 +31,77 @@
 #vocab-cards a:hover::after{
     content: attr(translation);
     position:absolute;
-    transform: translateY(3rem);
-    transform: translateX(-1rem);
+    transform: translate(-100%, 250%);
     transition: all 5s ease;
     font-size: 0.4rem;
-    color:black
+    color:azure;
 }
 
 #page-text {
     white-space: pre-wrap;
     font-size: 0.75rem;
     line-height: 1.2rem;
+    margin-top: 50px;
+    margin-bottom: 50px
+}
+
+#vocab-title{
+    text-align: center;
+    font-weight:bold;
+    margin: 20px
+}
+
+#pgnrForm{
+    align-items: center;
+    text-align: center;
+    align-self: center;
+}
+
+#pgnr{
+    padding:10px;
+    border-radius: 10px;
+    background-color: azure;
+    border-color: azure;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    color: midnightblue;
+    font-weight: bold;
+    width:100px;
+}
+
+
+#pgnrForm input[type="submit"] {
+    background-color: azure;
+    color: midnightblue;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    font-weight: bold;
+    transition: color 0.1s ease;
+    padding: 8px 20px;
+    margin: 10px;
+    margin-bottom: 50px;
+}
+
+
+#open-all-button{
+    background-color: azure;
+    color: midnightblue;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    font-weight: bold;
+    transition: color 0.1s ease;
+    padding: 8px 20px;
+    margin: 10px;
+    margin-bottom: 50px;
 }
