@@ -1,0 +1,45 @@
+#vocab-cards {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 0px;
+  gap: 20px;
+  align-items: center;
+}
+
+#vocab-cards >div {
+    background: azure;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 2s box-shadow 2s ease;
+    box-shadow: 1;
+}
+
+#vocab-cards p{
+    font-size: small;
+    line-height: 1.5;
+    font-size: 0.5rem;
+    color: midnightblue
+}
+
+#vocab-cards a{
+    font-size: 0.8rem;
+    color: midnightblue;
+}
+
+#vocab-cards a:hover::after{
+    content: attr(translation);
+    position:absolute;
+    transform: translateY(3rem);
+    transform: translateX(-1rem);
+    transition: all 5s ease;
+    font-size: 0.4rem;
+    color:black
+}
+
+#page-text {
+    white-space: pre-wrap;
+    font-size: 0.75rem;
+    line-height: 1.2rem;
+}
